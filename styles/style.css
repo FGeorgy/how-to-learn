@@ -9,17 +9,138 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
+/* рамка для ориентирования */
+
+header, section, div, h1, h2, p {
+	border: 1px solid red;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
 .header {
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
   /* выше установили ограничения для секции */
+	position: relative;
+	display: flex;
 }
+
+.logo {
+	width: 183px;
+	height: 32px;
+}
+
+.logo_place_header {
+	position: absolute;
+	top: 30px;
+	left: 64px;
+}
+
+.header__title {
+	display: flex;
+	width: 730px;
+	font-size: 102px;
+	font-weight: bold;
+	line-height: 96px;
+	align-items: center;
+	margin-left: 64px;
+	z-index: 2;
+	}
+
+.header__subtitle {
+	width: 388px;
+	font-size: 18px;
+	line-height: 25px;
+	position: absolute;
+	bottom: 30px;
+	left: 64px;
+}
+
+.header__subtitle__link {
+	text-decoration: none;
+	color: #2f80ed;
+}
+
+.header__main-illustration {
+	width: 765px;
+	height: 608px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+}
+
+
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
   height: 568px;
   width: 568px;
+	background-color: #2f80ed;
+	position: absolute;
+	top: 64px;
+	right: 0;
+}
+
+.descriptuon__two-columns {
+	margin: 100px auto;
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.descriptuon__two-columns__brief {
+	width: 175px;
+}
+
+.descriptuon__two-columns__brief__text {
+	font-size: 18px;
+	line-height: 1.2;
+	color: #2f80ed;
+	margin: 0;
+	padding: 0;
+}
+
+.descriptuon__two-columns__main-text {
+	width: 80%;
+	min-width: 784px;
+}
+
+.descriptuon__two-columns__paragraph {
+	font-size: 24px;
+	line-height: 34px;
+}
+
+.descriptuon__two-columns__paragraph:nth-of-type(2) {
+	margin: 30px 0;
+}
+
+.span-accent {
+	font-weight: bold;
+}
+
+.digits__section-title {
+	text-align: center;
+	margin: 100px auto 20px;
+}
+
+.section-title {
+	font-size: 60px;
+	font-weight: bold;
+	line-height: 1.15;
+}
+
+.digits__section-subtitle {
+	text-align: center;
+}
+
+.section-subtitle {
+	font-size: 24px;
+	line-height: 34px;
 }
 
 /* и элемента с модификатором вида ключ-значение */

@@ -15,12 +15,6 @@
   border: 1px solid #ff0000;
 } */
 
-/* Общие стили */
-
-.margin-none {
-  margin: 0;
-}
-
 /* Стили для шапки */
 
 .header {
@@ -46,15 +40,16 @@
 }
 
 .header__title {
+  margin: 0 0 0 64px;
   width: 730px;
   font-size: 102px;
   font-weight: bold;
   line-height: 96px;
-  margin-left: 64px;
   z-index: 3;
 }
 
 .header__subtitle {
+  margin: 0;
   width: 388px;
   font-size: 18px;
   line-height: 25px;
@@ -72,8 +67,6 @@
 .header__main-illustration {
   width: 765px;
   height: 608px;
-  background: url('../images/header-image.png') no-repeat;
-  background-size: cover;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -106,9 +99,7 @@
 
 .two-columns__brief {
   width: 175px;
-}
-
-.two-columns__brief__text {
+  margin: 0;
   font-size: 18px;
   line-height: 1.2;
   color: #2f80ed;
@@ -120,6 +111,7 @@
 }
 
 .two-columns__paragraph {
+  margin: 0;
   font-size: 24px;
   line-height: 34px;
 }
@@ -128,7 +120,7 @@
   margin: 30px 0;
 }
 
-.span-accent {
+.two-columns__span-accent {
   font-weight: bold;
 }
 
@@ -147,6 +139,7 @@
 }
 
 .section-subtitle {
+  margin: 0;
   font-size: 24px;
   line-height: 34px;
   text-align: center;
@@ -163,40 +156,35 @@
   justify-content: space-between;
 }
 
-.digits__table__cell {
+.table__cell {
   width: 250px;
   margin-top: 60px;
 }
 
-.cell__heading {
+.table__heading {
+  margin: 0;
   font-size: 24px;
   font-weight: bold;
   line-height: 1.15;
-  margin-bottom:20px;
 }
 
-.cell__text {
+.table__text {
+  margin: 20px 0 0 0;
   font-size: 18px;
   line-height: 1.2;
-}
-
-.cell__caption {
-  font-size: 18px;
-  line-height: 1.2;
-  margin-top: 20px;
 }
 
 /* Стили блока "Метод Фейнмана" */
 
 .feynman {
   position: relative;
-  height: 890px;
-  background-color:#f2f2f2;
-  z-index: -2;
+  min-height: 890px;
+  background:#f2f2f2 url('../images/feynman.png') 0 100% / 867px 637px no-repeat;
   padding-top: 100px;
 }
 
 .feynman__title {
+  margin: 0;
   width: 648px;
   font-size: 120px;
   font-weight: bold;
@@ -206,6 +194,7 @@
 }
 
 .feynman__subtitle {
+  margin: 0;
   font-size: 36px;
   line-height: 51px;
   text-align: center;
@@ -214,22 +203,12 @@
 
 .feynman__link {
   text-decoration: none;
+  color: #2f80ed;
   font-size: 36px;
   line-height: 51px;
   position: absolute;
   top: 50%;
   right: 48px;
-}
-
-.feynman__image {
-  width: 867px;
-  height: 637px;
-  background: url('../images/feynman.png') no-repeat;
-  background-size: cover;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
 }
 
 /* Стили блока "Принципы Кауфмана" */
@@ -238,25 +217,34 @@
   padding: 90px 0;
   position: relative;
   overflow: hidden;
+  background-color: #1f1f1f;
 }
 
-.theme_dark {
+.section-title_theme_dark {
   color: #fff;
-  background-color: #000;
-}
-
-.position {
   position: relative;
   z-index: 2;
 }
 
-.kaufman__table__cell {
+.section-subtitle_theme_dark {
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.table_theme_dark {
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.table__cell_theme_dark {
   width: 200px;
   margin-right: 0;
   margin-top: 80px;
 }
 
-.kaufman__image {
+.kaufman__triangle {
   width: 877px;
   height: 877px;
   background: url('../images/kaufman-triangle.svg') no-repeat;
@@ -271,18 +259,19 @@
 .footer {
   box-sizing: border-box;
   min-height: 350px;
-  padding: 60px 0 40px;
+  color: #fff;
+  background-color: #1f1f1f;
+  display: flex;
 }
 
 .footer__columns {
   width: 90%;
-  min-height: 250px;
-  margin: 0 auto;
+  margin: 60px auto 40px;
   display: flex;
   justify-content: space-between;
 }
 
-.footer__column_content-copyright {
+.footer__column_content_copyright {
   flex-basis: 711px;
   display: flex;
   flex-direction: column;
@@ -294,27 +283,25 @@
 }
 
 .footer__author {
+  margin: 0;
   font-size: 18px;
   line-height: 25px;
 }
 
-.columns__heading {
+.footer__column-heading {
   margin: 0;
   font-size: 18px;
   font-weight: bold;
   line-height: 30px;
 }
 
-.list__padding-none {
+.column__links {
   padding: 0;
-}
-
-.columns__links {
-  list-style: none;
   margin: 20px 0 16px;
+  list-style: none;
 }
 
-.columns__link {
+.column__link {
   text-decoration: none;
   color: #fff;
   font-size: 18px;

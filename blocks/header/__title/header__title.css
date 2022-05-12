@@ -5,4 +5,9 @@
   font-weight: bold;
   line-height: 96px;
   z-index: 3;
+  transition: opacity .1s ease;
+}
+
+.header__title:hover {
+  opacity: .6;
 }
